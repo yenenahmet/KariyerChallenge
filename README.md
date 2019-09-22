@@ -13,3 +13,8 @@
  *   RecyclerView
  *   AndroidX
  *   DataClass
+
+
+
+# Apk
+ Apk -> (app/release/KariyerChallenge.apk)
