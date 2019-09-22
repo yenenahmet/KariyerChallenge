@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/order_sing_out_background"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textSize="22sp"
+            android:layout_gravity="center_horizontal"
+            android:text="Çıkış yapmak istiyormusunuz?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dialogCancel"
+                android:textSize="16sp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/order_sing_out_background"
+                android:textColor="@color/colorAccent"
+                android:text="İstemiyorum"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dialogSignOut"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_button_radius"
+                android:textColor="@android:color/white"
+                android:text="İstiyorum"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</LinearLayout>

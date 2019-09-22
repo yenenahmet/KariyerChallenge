@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.yenen.ahmet.kariyerchallenge"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    dataBinding {
+        enabled = true
+    }
+    androidExtensions {
+        experimental = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-beta04'
+    //MVVM
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    //MVVM
+    // Retrofit
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation('com.squareup.retrofit2:retrofit:2.5.0') { exclude module: 'okhttp' }
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    //Retrofit
+    //Rx
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    //Rx
+    // Dagger 2
+    implementation 'com.google.dagger:dagger:2.23.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    kapt 'com.google.dagger:dagger-compiler:2.23.1'
+    implementation 'com.google.dagger:dagger-android:2.23.1'
+    kapt 'com.google.dagger:dagger-android-processor:2.23.1'
+    implementation 'com.google.dagger:dagger-android-support:2.12'
+    // Dagger 2
+
+    // Extra
+    implementation 'com.pnikosis:materialish-progress:1.7'
+}

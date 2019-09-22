@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="viewModel"
+                type="com.yenen.ahmet.kariyerchallenge.viewmodel.LoginViewModel"/>
+    </data>
+
+    <LinearLayout
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.LoginActivity">
+
+        <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp"
+                    android:text="MARKETİM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <View
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+        <LinearLayout
+                android:weightSum="10"
+                android:orientation="horizontal"
+                android:layout_weight="8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+            <View
+                    android:layout_weight="0.8"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    tools:ignore="NestedWeights"/>
+            <LinearLayout
+                    android:layout_weight="8.4"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:weightSum="10"
+                        android:background="@drawable/relative_layout_border"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+                    <RelativeLayout
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                        <androidx.appcompat.widget.AppCompatImageView
+                                android:src="@drawable/ic_avatar"
+                                android:layout_centerInParent="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_marginEnd="10dp"
+                            android:inputType="text"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:maxLines="1"
+                            android:text="@={viewModel.userName}"
+                            android:background="@android:color/transparent"
+                            android:layout_weight="8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"/>
+
+                </LinearLayout>
+                <LinearLayout
+                        android:weightSum="10"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/relative_layout_border"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+                    <RelativeLayout
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                        <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_centerInParent="true"
+                                android:src="@android:drawable/ic_partial_secure"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_marginEnd="10dp"
+                            android:singleLine="true"
+                            android:inputType="textPassword"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:text="@={viewModel.userPassword}"
+                            android:background="@android:color/transparent"
+                            android:layout_weight="8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"/>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+
+                    <androidx.appcompat.widget.SwitchCompat
+                            android:checked="@={viewModel.rememberMe}"
+                            android:id="@+id/switchCompat"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_marginStart="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/switchCompat"
+                            android:text="Beni Hatırla"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLogin"
+                        android:background="@drawable/login_button_radius"
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp"
+                        android:textAllCaps="false"
+                        android:text="Giriş"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+
+            <View
+                    android:layout_weight="0.8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</layout>
