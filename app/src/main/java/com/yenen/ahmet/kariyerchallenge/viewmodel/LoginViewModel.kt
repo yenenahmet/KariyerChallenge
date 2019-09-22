@@ -27,12 +27,12 @@ class LoginViewModel @Inject constructor(private val sharedPreferencesHelper: Sh
             loginResult.value = "Kullanıcı Adı ve Şifreyi Boş Bırakamazsınız !"
             return
         }
-        if (userName.value!!.isEmpty() || userPassword.value!!.isEmpty()) {
+        if (userName.value!!.trim().isEmpty() || userPassword.value!!.trim().isEmpty()) {
             loginResult.value = "Kullanıcı Adı ve Şifreyi Boş Bırakamazsınız !"
             return
         }
 
-        if (userName.value != "kariyer" || userPassword.value != "2019ADev") {
+        if (userName.value.toString().trim() != "kariyer" || userPassword.value.toString().trim() != "2019ADev") {
             loginResult.value = "Kullanıcı Adı veya Şifre Yanlış !"
             return
         }
