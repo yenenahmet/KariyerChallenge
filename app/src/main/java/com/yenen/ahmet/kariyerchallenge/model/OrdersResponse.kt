@@ -1,6 +1,5 @@
 package com.yenen.ahmet.kariyerchallenge.model
 
-import android.view.View
 
 data class OrdersResponse(
     val date: String,

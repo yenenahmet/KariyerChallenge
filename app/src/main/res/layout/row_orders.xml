@@ -40,8 +40,8 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/day"
                         android:layout_centerHorizontal="true"
-                        android:text="Ekim"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        app:setOrdersMonth="@{model.month}" />
 
                 <View
                         android:layout_width="1dp"
@@ -98,9 +98,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:text="@{String.valueOf(model.productPrice)}"
                             android:textSize="15sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            app:setProductPrice="@{model.productPrice}" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -134,11 +134,11 @@
 
 
         <LinearLayout
-                app:setOrdersDetailVisibility="@{model.rowDetailVisibility}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorLightGray"
-                android:weightSum="10">
+                android:weightSum="10"
+                app:setOrdersDetailVisibility="@{model.rowDetailVisibility}">
 
             <View
                     android:layout_width="0dp"
@@ -166,9 +166,9 @@
                         android:layout_alignParentEnd="true"
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="5dp"
-                        android:text="@{String.valueOf(model.productDetail.summaryPrice)}"
                         android:textSize="15sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        app:setProductPrice="@{model.productDetail.summaryPrice}" />
 
                 <View
                         android:layout_width="match_parent"
