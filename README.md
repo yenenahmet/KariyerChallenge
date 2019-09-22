@@ -17,4 +17,4 @@
 
 
 # Apk
- Apk -> (app/release/KariyerChallenge.apk)
+ [Apk](app/release/KariyerChallenge.apk)
