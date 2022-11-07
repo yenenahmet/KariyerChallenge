@@ -28,8 +28,11 @@
  # Key Store
 
  -> https://github.com/canvas-technology/dempinPOS.android.app/blob/master/app/key/dempin.key
+ 
  -> password - canvas_*dempin.
+ 
  -> alias - dempin_key
+ 
  -> First and LastName - Canvas
  -> City - Istanbul 
  -> Country Code - 34
