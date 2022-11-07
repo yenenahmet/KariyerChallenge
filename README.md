@@ -34,5 +34,7 @@
  -> alias - dempin_key
  
  -> First and LastName - Canvas
+ 
  -> City - Istanbul 
+ 
  -> Country Code - 34
